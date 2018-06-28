@@ -27,6 +27,11 @@ class App extends Component {
         </div>
         <button onClick={() => this.getGetRequest()}>GET</button>
         <button onClick={this.getPostRequest}>POST</button>
+        <form onSubmit={this.handleSubmit}>
+        <label>
+          <input type="name" />
+          </label>
+        </form>
         <p className="App-intro">
           To get started, edit <code>src/App.js</code> and save to reload.
         </p>
