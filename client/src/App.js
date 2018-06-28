@@ -26,7 +26,7 @@ class App extends Component {
   };
   postBlog = event => {
     const { title, body } = this.state;
-    axios.post("/api/blog", { title, body } ).then(res => {
+    axios.post("/api/blog", { title, body }).then(res => {
       console.log(res);
       this.setState({ title: "", body: "" });
     })
