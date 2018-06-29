@@ -2,13 +2,15 @@
 
 import auth0 from 'auth0-js';
 import history from '../history';
-// History
+
+const origin = window.location.origin;
+// when deployed will redirect there
 
 export default class Auth {
   auth0 = new auth0.WebAuth({
     domain: 'mooshoo.auth0.com',
     clientID: 'EN7LTaBbCWEeFXUXXm5C7efE0gPqPsBC',
-    redirectUri: 'http://localhost:3000/callback',
+    redirectUri: origin + '/callback',
     audience: 'https://mooshoo.auth0.com/userinfo',
     responseType: 'token id_token',
     scope: 'openid'
